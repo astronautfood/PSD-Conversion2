@@ -1,0 +1,123 @@
+.button a {
+	text-transform: $title;
+	border-radius: 30px; 
+	padding: 20px;
+	text-align: center;
+}
+
+.hero-button a {
+	width: 250px;
+	border: 1px solid #fff;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.services__button--green a,
+.services__button--black a {
+	width: 190px;
+	font-size: 13px;
+	color: #fff;
+	font-weight: 600;
+	margin: 0 auto;
+	@include respond-to(medium) {
+		
+	}
+}
+
+.services__button--green a {
+	background: $brandColor;
+	color: #fff;
+}
+
+.services__button--black a {
+	background: #000;
+}
+
+.course-selection__button--small a {
+	background: $brandColor;
+	width: 70px;
+	padding: 3px;
+	@include paragraph(10px);
+	color: #fff;
+	margin: 15px 0 15px;
+	text-transform: capitalize;
+}
+
+.view-all__button--outline a {
+	width: 240px;
+	@include sectionHeading;
+	font-size: 16px;
+	border: 1px solid $brandColor;
+	margin: 80px auto 0;
+}
+
+.top-news__buttons {
+	margin-top: 90px;
+	display: flex;
+	justify-content: center;
+	@include sectionHeading;
+	font-size: 16px;
+	@include respond-to(small) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.top-news__button--green a,
+.top-news__button--black a {
+	width: 215px;
+	color: #fff;
+}
+
+.top-news__button--green a {
+	background-color: $brandColor;
+	margin-right: 25px;
+	@include respond-to(small) {
+		margin: 0 0 30px;
+	}
+}
+
+.top-news__button--black a {
+	background: #000;
+}
+
+.all-teachers__button a {
+	background: $brandColor;
+	width: 215px;
+	margin: 100px auto;
+	@include sectionHeading;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 30px;
+	color: #fff;
+
+	@media screen and (max-width: 607px) {
+		margin: 50px auto;
+	}
+}
+
+.load-more__button--outline a {
+	width: 215px;
+	border: 1px solid $brandColor;
+	@include sectionHeading;
+	font-size: 18px;
+	padding: 15px;
+	margin: 60px auto 150px;
+}
+
+.message-button a {
+	width: 235px;
+	background: $brandColor;
+	@include sectionHeading;
+	font-size: 20px;
+	text-transform: capitalize;
+	border-radius: 10px;
+	color: #fff;
+	padding: 15px;
+	margin: 45px 0 145px;
+}
+
+
+

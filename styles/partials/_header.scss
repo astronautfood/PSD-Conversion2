@@ -1,0 +1,250 @@
+header {
+	background: #f8f8f8;
+	color: $pColor;
+}
+
+// TOP HEADER
+
+.header-top {
+	border-bottom: 1px solid $pColor;
+	@include respond-to(medium) {
+		display: none;
+	}
+}
+
+.header-top__content {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.header-top__left {
+		font-family: $primaryFont;
+		font-size: 14px;
+}
+
+.header-top__right {
+	display: flex;
+	align-items: baseline;
+}
+
+.phone-number__icon {
+	font-size: 12px;
+	margin-right: 3px;
+}
+
+.phone-number {
+	font-family: $secondaryFont;
+	font-size: 14px;
+	font-weight: 400;
+	margin-right: 20px;
+}
+
+i.email__icon {
+	font-size: 12px;
+	margin-right: 5px;
+}
+
+.email {
+	font-family: $secondaryFont;
+	font-weight: 400;
+	font-size: 12px;
+	margin-right: 25px;
+}
+
+.social-media-icons {
+	height: 13px;
+}
+
+// BOTTOM HEADER/NAV
+
+main {
+	@include respond-to(medium) {
+		position: relative;
+		transition: ease-in-out all 0.3s;
+		top: 0;
+	}
+}
+
+.header-bottom__content {
+	display: flex;
+	justify-content: space-between;
+	font-family: $primaryFont;
+	@include respond-to(larger) {
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.logo {
+	font-size: 35px;
+	color: $headingColor;
+	text-transform: $title;
+	font-weight: $bold;
+	padding: 35px 35px 0 0;
+	@include respond-to(larger) {
+		padding: 35px 0 0;
+	}
+
+	@include respond-to(medium) {
+		padding: 20px 0 20px;
+	}
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	@include respond-to(large) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		padding: 0 60px;
+	}
+
+	@include respond-to(medium) {
+		background: #f6f6f6;
+		padding: 0 20px;
+		position: fixed;
+		z-index: 40;
+		height: 20%;
+		top: -30%;
+		width: 100%;
+		transition: all 0.5s;
+	}
+
+	.header-nav__list--active a {
+	color: $brandColor;
+	}
+}
+
+i.fa-bars {
+	@include respond-to(medium) {
+		color: $pColor;
+		padding-bottom: 20px;
+	}
+}
+
+
+.header-nav__list a,
+.header-nav__list--active a {
+	margin-left: 30px;
+	text-transform: $title;
+	font-weight: $bold;
+	color: $pColor;
+	padding: 45px 0 40px;
+	@include respond-to(large) {
+		padding: 20px 0 10px;
+	}
+
+	@include respond-to(medium) {
+		display: block;
+		transition: all 0.3s;
+	}
+
+	@include respond-to(small) {
+		font-size: 12px;
+	}
+}
+
+.header-nav__list a:hover {
+	color: $brandColor;
+}
+
+input#toggle:checked ~ main  .header-nav {
+	top: 0;
+}
+
+input#toggle:checked ~ .header-bottom__content {
+	top: 20%;
+}
+
+input#toggle:checked ~ main {
+	position: relative;
+	top: 141px;
+}
+
+input#toggle {
+	display: none;
+}
+
+label[for="toggle"] {
+	display: none;
+	@include respond-to(medium) {
+		display: block;
+		top: 50px;
+		left: 100%;
+		right: 100%;
+		color: #000;
+	}
+}
+
+// HERO SECTION OF HEADER
+
+.hero {
+	height: 825px;
+	background-image: url(../assets/heroImage.jpg);
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+ 	align-items: center;
+ 	color: #fff;
+ 	font-family: $primaryFont;
+}
+
+.header--keyline {
+	font-size: 28px;
+	font-weight: $bold;
+	position: relative;
+	margin: 250px 0 45px;
+	@include respond-to(small) {
+		font-size: 22px;	
+	}
+}
+
+.header--keyline::after {
+	content: "";
+	display: block;
+	width: 150px;
+	border: 1px solid #fff;
+	margin-top: 24px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.title {
+	font-size: 55px;
+	text-transform: $title;
+	margin-bottom: 15px;
+	text-align: center;
+	@include respond-to(medium) {
+		font-size: 45px;	
+	}
+
+	@include respond-to(small) {
+		font-size: 30px;	
+	}
+}
+
+.subtitle {
+	font-size: 20px;
+	text-transform: capitalize;
+	margin-bottom: 65px;
+	@include respond-to(medium) {
+		text-align: center;	
+	}
+
+	@include respond-to(small) {
+		font-size: 16px;
+		padding-top: 15px;	
+	}
+}
+
+
+
+

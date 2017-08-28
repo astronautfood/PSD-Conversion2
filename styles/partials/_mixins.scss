@@ -1,0 +1,56 @@
+@mixin sectionHeading() {
+	font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: $bold;
+    color: #333333;
+    line-height: 24px;
+    text-transform: $title;
+    text-align: center;
+}
+
+@mixin paragraph($fontValue) {
+	font-family: $secondaryFont;
+	color: $pColor;
+	font-size: $fontValue;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "small-medium" {
+    @media (max-width: 607px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (max-width: 917px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "larger" {
+    @media (max-width: 1110px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
